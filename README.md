@@ -1,76 +1,34 @@
-[![Build Status](https://travis-ci.org/ashwanthkumar/slack-java-webhook.svg)](https://travis-ci.org/ashwanthkumar/slack-java-webhook)
-
-# slack-java-webhook
-Java Client to Slack's Webhook feature. 
-
-## Dependencies
-
-For Maven,
-```xml
-<dependency>
-  <groupId>in.ashwanthkumar</groupId>
-  <artifactId>slack-java-webhook</artifactId>
-  <version>${slack-java-webhook.version}</version>
-</dependency>
-```
-
-For SBT,
-```
-libraryDependencies += "in.ashwanthkumar" % "slack-java-webhook" % scalaJavaWebhookVersion
-```
-
-Latest version of *slack-java-webhook* is [![scala-java-webhook on Maven Central](https://img.shields.io/maven-central/v/in.ashwanthkumar/slack-java-webhook.svg?label=slack-java-webhook&style=plastic)](https://maven-badges.herokuapp.com/maven-central/in.ashwanthkumar/slack-java-webhook)
+# typetalk-java-api
+Java Client to Typetalk incoming webhook. 
 
 ## Usage
 ```java
-// Using SlackMessage
-new Slack(webhookUrl)
-    .icon(":smiling_imp:") // Ref - http://www.emoji-cheat-sheet.com/
-    .sendToUser("slackbot")
-    .displayName("slack-java-client")
-    .push(new SlackMessage("Text from my ").bold("Slack-Java-Client"));
+// Using TypetalkMessage
+new Typetalk(endpointUrl)
+    .push(new TypetalkMessage("This repository is ").link("https://github.com/14kw/typetalk-java-webhook", "Typetalk-Java-Client"));
 
-// Using SlackAttachment
-new Slack(webhookUrl)
-    .sendToUser("slackbot")
-    .displayName("slack-java-client")
-    .push(new SlackAttachment("Text from my Slack-Java-Client").author("ashwanthkumar", "https://avatars0.githubusercontent.com/u/600279?v=3&s=40"));
+// Using TypetalkAttachment
+new Typetalk(endpointUrl)
+    .push(new TypetalkAttachment("https://avatars2.githubusercontent.com/u/1132256?s=460&v=4", "14kw avatar"));
+
+// Using TypetalkMessage And TypetalkAttachment
+new Typetalk(endpointUrl)
+    .push(
+        new TypetalkMessage("This repository is ").link("https://github.com/14kw/typetalk-java-webhook", "Typetalk-Java-Client"),
+        new TypetalkAttachment("https://avatars2.githubusercontent.com/u/1132256?s=460&v=4", "14kw avatar")
+    );
 
 ```
 
 ## Notes
-With `SlackMessage` you can create rich text as specified in https://api.slack.com/docs/formatting. Example usage
-```java
-new SlackMessage("Some text can be")
-    .italic("Italic")
-    .text(". :)")
-```
+With `TypetalkMessage` you can create rich text as specified in https://developer.nulab-inc.com/ja/docs/typetalk/formatting/. Example usage
 
-Available methods on `SlackMessage`
+Available methods on `TypetalkMessage`
 - `text`
 - `link`
-- `bold`
-- `italic`
 - `code`
 - `preformatted`
 - `quote`
-
-With `SlackAttachment` you can create much more sophisticated rich text as specified in https://api.slack.com/docs/attachments. Example usage
-```java
-new SlackAttachment()
-    .author("ashwanthkumar")
-    .author("ashwanthkumar", "https://avatars0.githubusercontent.com/u/600279?v=3&s=40")
-```
-
-Available methods on `SlackAttachment`
-- `fallback`
-- `color`
-- `preText`
-- `author`
-- `title`
-- `text`
-- `imageUrl`
-- `addField`
 
 ## License
 

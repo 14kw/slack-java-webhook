@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>in.ashwanthkumar</groupId>
-    <artifactId>slack-java-webhook</artifactId>
-    <version>0.0.9-SNAPSHOT</version>
-    <name>Slack Webhook (Java)</name>
-    <description>Slack Webhook API in Java</description>
+    <groupId>com.onefour.typetalk</groupId>
+    <artifactId>typetalk-java-webhook</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Typetalk incoming webhook Java Client (Java)</name>
+    <description>Java Client to Typetalk incoming webhook</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,10 +14,9 @@
 
     <developers>
         <developer>
-            <email>ashwanthkumar@googlemail.com</email>
-            <name>Ashwanth Kumar</name>
-            <url>http://www.ashwanthkumar.in/</url>
-            <id>ashwanthkumar</id>
+            <email>14codemail@googlemail.com</email>
+            <name>14kw</name>
+            <url>https://14code.com/</url>
         </developer>
     </developers>
 
@@ -26,11 +25,6 @@
             <groupId>in.ashwanthkumar</groupId>
             <artifactId>my-java-utils</artifactId>
             <version>0.0.7</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.3.1</version>
         </dependency>
         <dependency>
             <groupId>com.google.http-client</groupId>
@@ -71,7 +65,7 @@
     </distributionManagement>
 
 
-    <url>https://github.com/ashwanthkumar/slack-java-webhook</url>
+    <url>https://github.com/14kw/typetalk-java-webhook</url>
     <licenses>
         <license>
             <name>Apache2</name>
@@ -79,8 +73,8 @@
         </license>
     </licenses>
     <scm>
-        <url>https://github.com/ashwanthkumar/slack-java-webhook</url>
-        <connection>scm:git:git@github.com:ashwanthkumar/slack-java-webhook.git</connection>
+        <url>https://github.com/14kw/typetalk-java-webhook</url>
+        <connection>git@github.com:14kw/typetalk-java-webhook.git</connection>
     </scm>
 
     <build>
